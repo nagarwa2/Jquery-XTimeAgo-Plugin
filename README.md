@@ -5,9 +5,11 @@ For example, when you login into your GMAIL account at bottom right of page you 
 
 This pluging also show the 'MM-DD-YY HH:MM:SS' date format string in html title tag. Hover over the html tag to see the effect. I had also added the toggle functionality, so that on click of html tag you can switch between timeago plugin modified string and 'MM-DD-YY HH:MM:SS' date format string.
 
-To acheive that you can use this plugin. Just create a HTML tag with class '.jq-timeago' displaying datetime string in toUTCString(),toLocaleString() etc format. Call the jquery timeago plugin for that element to see the desired result.
+To acheive that you can use this plugin. Just create a HTML tag with css class 'jq-timeago' displaying datetime string in toUTCString(),toLocaleString() etc format. Call the jquery timeago plugin for that element to see the desired result.
 
 For reference take a look at index.html page.
+
+To use this plugin in your html page include the js file, attach 'jq-timeago' css class to html tag and call the timeago plugin.
 
 Screenshots:
 
