@@ -18,12 +18,13 @@ $.fn.timeago = function(){
     var hours = currentDate.getHours();
     var minutes = currentDate.getMinutes();
     var seconds = currentDate.getSeconds();
-    var titleValue = month + "-" + date + "-" + year + " " + hours + 		":" + minutes + ":" + seconds;
+    var titleValue = month + "-" + date + "-" + year + " " + hours + ":" + minutes + ":" + seconds;
     this.attr("title",titleValue);
 
-	/*On clicking span, toggling the value between modified timeago 		string and date in MM-DD-YY format */
+	/*On clicking span, toggling the value between modified timeago string and date in MM-DD-YY format */
     this.click((function(){
-      /*I had here implemented Javascript closure technique so that I can 		get a private variable which can be only modified when clicking on 		span*/
+      /*I had here implemented Javascript closure technique so that I can get a private variable which can be only modified 
+      when clicking on span*/
       var isNewValue = true;
       return function(){
         isNewValue = !isNewValue;
@@ -42,7 +43,14 @@ $.fn.timeago = function(){
 
 /*Function that check time in span and then compares with current time to get timeago modified string*/
 function getTimeAgo(datetime){
-	var date = new Date(datetime);
+    var date;
+    try{
+	date = new Date(datetime);
+        if(isNaN(date.getTime()))
+        	return date;
+    }catch(e){
+    	return e.message;
+    }
     var currentDate = new Date();
     var currentTime = currentDate.getTime();
     var displayedTime = date.getTime();
@@ -63,7 +71,7 @@ function getTimeAgo(datetime){
           return minutes + " minutes ago";
       }
       else if(hour < 24){
-          return hour + " hours ago";
+          return hour + " hour ago";
       }
       else if(hour < 48){
           return "yesterday";
