@@ -8,15 +8,18 @@ $.fn.timeago = function(){
     /*Setting modifiedDateString in span*/
     this.html(modifiedValue);
     
-    /*Display MM-DD-YY on hovering over span in HTML title tag*/
+    /*Display MM-DD-YY HH:MM:SS on hovering over span in HTML title tag*/
     var currentDate = new Date(currentValue);
     var month = Number(currentDate.getMonth()) + 1;
     month = month.toString().length > 1 ? month : "0" + month;
     var date = currentDate.getDate();
     date = date.toString().length > 1 ? date : "0" + date;
     var year = currentDate.getFullYear().toString().substr(-2);
-    var titleValue = month + "-" + date + "-" + year;
-    this.attr("title",titleValue)
+    var hours = currentDate.getHours();
+    var minutes = currentDate.getMinutes();
+    var seconds = currentDate.getSeconds();
+    var titleValue = month + "-" + date + "-" + year + " " + hours + 		":" + minutes + ":" + seconds;
+    this.attr("title",titleValue);
 
 	/*On clicking span, toggling the value between modified timeago 		string and date in MM-DD-YY format */
     this.click((function(){
@@ -25,11 +28,13 @@ $.fn.timeago = function(){
       return function(){
         isNewValue = !isNewValue;
         if(!isNewValue){
-          $(this).html(titleValue)
+		  $(this).attr("title",modifiedValue);
+          $(this).html(titleValue);
         }
         else{
           modifiedValue = getTimeAgo(currentValue);
           $(this).html(modifiedValue);
+		  $(this).attr("title",titleValue);
         }
       }
     })());
