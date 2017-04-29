@@ -11,8 +11,8 @@ For reference take a look at index.html page.
 
 Screenshots:
 
-![alt text](https://raw.githubusercontent.com/nagarwa2/Jquery-TimeAgo-Plugin/blob/master/1.png)
+![alt text](https://raw.githubusercontent.com/nagarwa2/Jquery-TimeAgo-Plugin/branch/master/1.png)
 
-![alt text](https://raw.githubusercontent.com/nagarwa2/Jquery-TimeAgo-Plugin/blob/master/2.png)
+![alt text](https://raw.githubusercontent.com/nagarwa2/Jquery-TimeAgo-Plugin/branch/master/2.png)
 
-![alt text](https://raw.githubusercontent.com/nagarwa2/Jquery-TimeAgo-Plugin/blob/master/3.png)
+![alt text](https://raw.githubusercontent.com/nagarwa2/Jquery-TimeAgo-Plugin/branch/master/3.png)
