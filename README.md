@@ -9,3 +9,4 @@ To acheive that you can use this plugin. Just create a HTML tag with class '.jq-
 
 For reference take a look at index.html page.
 
+![alt text](https://raw.githubusercontent.com/nagarwa2/Jquery-TimeAgo-Plugin/branch/1.jpeg)
