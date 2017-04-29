@@ -2,20 +2,20 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="jquery-timeago.js"></script>
+<script src="jquery-xtimeago.js"></script>
 </head>
 <body>
 <h2>jQuery TimeAgo Plugin</h2>
 
-<span class='jq-timeago'></span>
+<span class='jq-xtimeago'></span>
 
 <script>
 
 /*Set whatever time you want to set in span. For now I had set current time */
-$(".jq-timeago").html(new Date().toUTCString());
+$(".jq-xtimeago").html(new Date().toUTCString());
 
 /*Calling timeago plugin*/
-$(".jq-timeago").timeago();
+$(".jq-xtimeago").xtimeago();
 
 </script>
 
