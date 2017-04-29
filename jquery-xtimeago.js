@@ -1,10 +1,10 @@
 
 /*Plugin definition*/
-$.fn.timeago = function(){
+$.fn.xtimeago = function(){
 	/*Getting current value in the span*/
     var currentValue = this.html();
     /*Getting the timeago string*/
-    var modifiedValue = getTimeAgo(currentValue);
+    var modifiedValue = getXTimeAgo(currentValue);
     /*Setting modifiedDateString in span*/
     this.html(modifiedValue);
     
@@ -33,7 +33,7 @@ $.fn.timeago = function(){
           $(this).html(titleValue);
         }
         else{
-          modifiedValue = getTimeAgo(currentValue);
+          modifiedValue = getXTimeAgo(currentValue);
           $(this).html(modifiedValue);
 		  $(this).attr("title",titleValue);
         }
@@ -42,7 +42,7 @@ $.fn.timeago = function(){
 }
 
 /*Function that check time in span and then compares with current time to get timeago modified string*/
-function getTimeAgo(datetime){
+function getXTimeAgo(datetime){
     var date;
     try{
 	date = new Date(datetime);
