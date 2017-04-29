@@ -16,8 +16,11 @@ $.fn.xtimeago = function(){
     date = date.toString().length > 1 ? date : "0" + date;
     var year = currentDate.getFullYear().toString().substr(-2);
     var hours = currentDate.getHours();
+    hours = hours.toString().length > 1 ? hours : "0" + hours;
     var minutes = currentDate.getMinutes();
+    minutes = minutes.toString().length > 1 ? minutes : "0" + minutes;
     var seconds = currentDate.getSeconds();
+    seconds = seconds.toString().length > 1 ? seconds : "0" + seconds;
     var titleValue = month + "-" + date + "-" + year + " " + hours + ":" + minutes + ":" + seconds;
     this.attr("title",titleValue);
 
